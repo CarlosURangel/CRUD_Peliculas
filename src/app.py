@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from tkinter import messagebox
-from crud import insertar_pelicula, mostrar_peliculas
+from crud import insertar_pelicula, mostrar_peliculas, actualizar_pelicula, eliminar_pelicula
 from logging_config import log_transacciones, log_errores
 
 
@@ -25,12 +25,6 @@ def accion_mostrar():
     for p in peliculas:
         salida_text.insert("end", f"ID: {p[0]} | Título: {p[1]} | Director: {p[2]} | Año: {p[3]} | Género: {p[4]} | Calificación: {p[5]}\n")
 
-
-def actualizar_pelicula(id_pelicula, titulo, director, año, genero, calificacion):
-    messagebox.showinfo("Actualizar", f"Actualizar película {id_pelicula} con nuevos datos.")
-
-def eliminar_pelicula(id_pelicula):
-    messagebox.showinfo("Eliminar", f"Eliminar película con ID: {id_pelicula}")
 
 if __name__ == "__main__":
 
