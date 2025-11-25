@@ -1,25 +1,16 @@
-"""
-Archivo donde se declaran las funciones para el CRUD
-"""
-
-from tkinter import messagebox
 from db import conectar
-from logging_config import log_transacciones, log_errores
 from validaciones import validar_pelicula
+from logging_config import log_transacciones, log_errores
 
-def insertar_pelicula(titulo, director, año, genero, calificacion):
-    """
-    Función para insertar película
-    """
+# INSERTAR
+def insertar_pelicula_logic(titulo, director, año, genero, calificacion):
     error = validar_pelicula(titulo, año, calificacion)
     if error:
-        messagebox.showerror("Error", error)
-        return
+        return False, error
     try:
         conexion = conectar()
         if conexion is None:
-            messagebox.showerror("Error", "No hay conexión con la base de datos.")
-            return
+            return False, "No hay conexión con la base de datos."
 
         cursor = conexion.cursor()
         sql = """
@@ -29,121 +20,82 @@ def insertar_pelicula(titulo, director, año, genero, calificacion):
         cursor.execute(sql, (titulo, director, año, genero, calificacion))
         conexion.commit()
         log_transacciones.info(f"Insertada película: {titulo}")
-        messagebox.showinfo("Éxito", "Película insertada correctamente.")
-
+        return True, "Película insertada correctamente."
     except Exception as e:
         log_errores.error(f"Error al insertar: {e}")
-        messagebox.showerror("Error", "Ocurrió un error al insertar.")
-
+        return False, "Ocurrió un error al insertar."
     finally:
         if conexion:
             conexion.close()
 
-def mostrar_peliculas():
-    """
-    Función para mostrar películas
-    """
+# MOSTRAR
+def mostrar_peliculas_logic():
     try:
         conexion = conectar()
         if conexion is None:
-            messagebox.showerror("Error", "No hay conexión con la base de datos.")
             return []
-
         cursor = conexion.cursor()
         cursor.execute("SELECT * FROM peliculas")
         datos = cursor.fetchall()
         log_transacciones.info("Se consultaron las películas")
-        return datos
-
+        return list(datos)
     except Exception as e:
         log_errores.error(f"Error al mostrar: {e}")
-        messagebox.showerror("Error", "Ocurrió un error al consultar.")
         return []
-
     finally:
         if conexion:
             conexion.close()
 
-def actualizar_pelicula(id_pelicula, titulo, director, año, genero, calificacion):
-    """
-    Función para actualizar una película por ID
-    """
-    # Validar campos
+# ACTUALIZAR
+def actualizar_pelicula_logic(id_pelicula, titulo, director, año, genero, calificacion):
     error = validar_pelicula(titulo, año, calificacion)
     if error:
-        messagebox.showerror("Error", error)
-        return
-
+        return False, error
     if not id_pelicula or not id_pelicula.isdigit():
-        messagebox.showerror("Error", "Debe proporcionar un ID válido.")
-        return
-
+        return False, "Debe proporcionar un ID válido."
     try:
         conexion = conectar()
         if conexion is None:
-            messagebox.showerror("Error", "No hay conexión con la base de datos.")
-            return
-
+            return False, "No hay conexión con la base de datos."
         cursor = conexion.cursor()
-
-        # Verificar si existe
         cursor.execute("SELECT * FROM peliculas WHERE id=%s", (id_pelicula,))
         if cursor.fetchone() is None:
-            messagebox.showerror("Error", "No existe una película con ese ID.")
-            return
-
+            return False, "No existe una película con ese ID."
         sql = """
-        UPDATE peliculas 
+        UPDATE peliculas
         SET titulo=%s, director=%s, año=%s, genero=%s, calificacion=%s
         WHERE id=%s
         """
         cursor.execute(sql, (titulo, director, año, genero, calificacion, id_pelicula))
         conexion.commit()
-
         log_transacciones.info(f"Actualizada película ID {id_pelicula}")
-        messagebox.showinfo("Éxito", "Película actualizada correctamente.")
-
+        return True, "Película actualizada correctamente."
     except Exception as e:
         log_errores.error(f"Error al actualizar: {e}")
-        messagebox.showerror("Error", "Ocurrió un error al actualizar.")
-
+        return False, "Ocurrió un error al actualizar."
     finally:
         if conexion:
             conexion.close()
 
-
-def eliminar_pelicula(id_pelicula):
-    """
-    Función para eliminar una película por ID
-    """
+# ELIMINAR
+def eliminar_pelicula_logic(id_pelicula):
     if not id_pelicula or not id_pelicula.isdigit():
-        messagebox.showerror("Error", "Debe proporcionar un ID válido.")
-        return
-
+        return False, "Debe proporcionar un ID válido."
     try:
         conexion = conectar()
         if conexion is None:
-            messagebox.showerror("Error", "No hay conexión con la base de datos.")
-            return
-
+            return False, "No hay conexión con la base de datos."
         cursor = conexion.cursor()
-
-        # Verificar si existe
         cursor.execute("SELECT * FROM peliculas WHERE id=%s", (id_pelicula,))
         if cursor.fetchone() is None:
-            messagebox.showerror("Error", "No existe una película con ese ID.")
-            return
-
+            return False, "No existe una película con ese ID."
         cursor.execute("DELETE FROM peliculas WHERE id=%s", (id_pelicula,))
         conexion.commit()
-
         log_transacciones.info(f"Eliminada película ID {id_pelicula}")
-        messagebox.showinfo("Éxito", "Película eliminada correctamente.")
-
+        return True, "Película eliminada correctamente."
     except Exception as e:
         log_errores.error(f"Error al eliminar: {e}")
-        messagebox.showerror("Error", "Ocurrió un error al eliminar.")
-
+        return False, "Ocurrió un error al eliminar."
     finally:
         if conexion:
             conexion.close()

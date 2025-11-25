@@ -1,0 +1,85 @@
+2025-11-25 09:15:09,214 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:09,240 - INFO - Insertada película: TestPelícula
+2025-11-25 09:15:11,934 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:11,935 - INFO - Se consultaron las películas
+2025-11-25 09:15:11,948 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:11,950 - INFO - Se consultaron las películas
+2025-11-25 09:15:12,181 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:12,182 - INFO - Se consultaron las películas
+2025-11-25 09:15:12,187 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:12,202 - INFO - Actualizada película ID 47
+2025-11-25 09:15:12,504 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:12,725 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:12,727 - INFO - Se consultaron las películas
+2025-11-25 09:15:12,731 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:12,739 - INFO - Eliminada película ID 47
+2025-11-25 09:15:57,904 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:57,924 - INFO - Insertada película: TestPelícula
+2025-11-25 09:15:59,915 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:59,918 - INFO - Se consultaron las películas
+2025-11-25 09:15:59,929 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:15:59,930 - INFO - Se consultaron las películas
+2025-11-25 09:16:00,123 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:00,123 - INFO - Se consultaron las películas
+2025-11-25 09:16:00,152 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:00,161 - INFO - Actualizada película ID 48
+2025-11-25 09:16:02,393 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:02,395 - INFO - Se consultaron las películas
+2025-11-25 09:16:02,406 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:03,971 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:03,972 - INFO - Se consultaron las películas
+2025-11-25 09:16:03,985 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:03,987 - INFO - Se consultaron las películas
+2025-11-25 09:16:04,002 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:04,016 - INFO - Eliminada película ID 48
+2025-11-25 09:16:04,919 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:16:04,921 - INFO - Se consultaron las películas
+2025-11-25 09:17:32,745 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:32,753 - INFO - Insertada película: TestPelícula
+2025-11-25 09:17:34,821 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:34,823 - INFO - Se consultaron las películas
+2025-11-25 09:17:34,833 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:34,835 - INFO - Se consultaron las películas
+2025-11-25 09:17:34,859 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:34,860 - INFO - Se consultaron las películas
+2025-11-25 09:17:34,867 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:34,892 - INFO - Actualizada película ID 49
+2025-11-25 09:17:35,391 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:35,625 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:35,627 - INFO - Se consultaron las películas
+2025-11-25 09:17:35,641 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:17:35,663 - INFO - Eliminada película ID 49
+2025-11-25 09:42:33,337 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,349 - INFO - Insertada película: TestPelícula
+2025-11-25 09:42:33,384 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,386 - INFO - Se consultaron las películas
+2025-11-25 09:42:33,414 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,415 - INFO - Se consultaron las películas
+2025-11-25 09:42:33,422 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,431 - INFO - Actualizada película ID 50
+2025-11-25 09:42:33,460 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,461 - INFO - Se consultaron las películas
+2025-11-25 09:42:33,469 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,476 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,477 - INFO - Se consultaron las películas
+2025-11-25 09:42:33,482 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,493 - INFO - Eliminada película ID 50
+2025-11-25 09:42:33,521 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:33,523 - INFO - Se consultaron las películas
+2025-11-25 09:42:44,604 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,613 - INFO - Insertada película: TestPelícula
+2025-11-25 09:42:44,621 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,622 - INFO - Se consultaron las películas
+2025-11-25 09:42:44,650 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,652 - INFO - Se consultaron las películas
+2025-11-25 09:42:44,656 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,743 - INFO - Actualizada película ID 51
+2025-11-25 09:42:44,758 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,760 - INFO - Se consultaron las películas
+2025-11-25 09:42:44,789 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,797 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,798 - INFO - Se consultaron las películas
+2025-11-25 09:42:44,820 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,829 - INFO - Eliminada película ID 51
+2025-11-25 09:42:44,851 - INFO - Conexión establecida con la base de datos
+2025-11-25 09:42:44,853 - INFO - Se consultaron las películas

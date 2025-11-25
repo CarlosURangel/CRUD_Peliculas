@@ -1,0 +1,19 @@
+2025-11-25 09:15:12,207 - ERROR - Error al actualizar: Can't find a usable init.tcl in the following directories: 
+    {C:\Users\karla\AppData\Local\Programs\Python\Python312\tcl\tcl8.6}
+
+C:/Users/karla/AppData/Local/Programs/Python/Python312/tcl/tcl8.6/init.tcl: couldn't read file "C:/Users/karla/AppData/Local/Programs/Python/Python312/tcl/tcl8.6/init.tcl": No error
+couldn't read file "C:/Users/karla/AppData/Local/Programs/Python/Python312/tcl/tcl8.6/init.tcl": No error
+    while executing
+"source C:/Users/karla/AppData/Local/Programs/Python/Python312/tcl/tcl8.6/init.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list source $tclfile]"
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-11-25 09:15:12,506 - ERROR - Error al actualizar: No master specified and tkinter is configured to not support default root
+2025-11-25 09:15:12,741 - ERROR - Error al eliminar: No master specified and tkinter is configured to not support default root
+2025-11-25 09:17:34,934 - ERROR - Error al actualizar: couldn't read file "C:/Users/karla/AppData/Local/Programs/Python/Python312/tcl/tcl8.6/auto.tcl": no such file or directory
+2025-11-25 09:17:35,392 - ERROR - Error al actualizar: No master specified and tkinter is configured to not support default root
+2025-11-25 09:17:35,663 - ERROR - Error al eliminar: No master specified and tkinter is configured to not support default root
